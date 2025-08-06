@@ -1,5 +1,13 @@
+# nixpacks.toml
+
 [phases.setup]
 nixPkgs = ["...", "ffmpeg"]
 
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
 [start]
-commands = ["node index.js"]
+cmd = "node index.js"
